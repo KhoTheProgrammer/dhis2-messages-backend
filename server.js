@@ -41,6 +41,7 @@ app.post("/api/messages", async (req, res) => {
   } catch (err) {
     console.error("Message save error:", err);
     res.status(500).json({ error: "Failed to save message" });
+    console.log(err.message)
   }
 });
 
@@ -52,16 +53,9 @@ app.get("/api/messages", async (req, res) => {
   } catch (err) {
     console.error("Messages retrieval error:", err);
     res.status(500).json({ error: "Failed to retrieve messages" });
+    console.log(err.message);
+    
   }
-});
-
-// Global error handler
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({
-    error: "Something went wrong!",
-    message: err.message,
-  });
 });
 
 const server = app.listen(PORT, async () => {
