@@ -1,5 +1,5 @@
 {
-  "name": "Dhis2-patient-reminder-backend",
+  "name": "dhis2_patient_reminder_backend",
   "version": "1.0.0",
   "main": "index.js",
   "author": "KhoTheProgrammer <kondwanipadyera@gmail.com>",
