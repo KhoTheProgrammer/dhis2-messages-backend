@@ -12,7 +12,7 @@ async function createTables() {
     await client.query(`
       CREATE TABLE IF NOT EXISTS "Message" (
         id SERIAL PRIMARY KEY,
-        "patientId" INTEGER NOT NULL,
+        "patientId" VARCHAR(24) NOT NULL,
         text TEXT NOT NULL,
         "dateCreated" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );
