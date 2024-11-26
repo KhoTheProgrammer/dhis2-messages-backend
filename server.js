@@ -28,6 +28,7 @@ app.post("/api/messages", async (req, res) => {
     res.status(201).json(newMessage);
   } catch (err) {
     res.status(500).json({ error: "Failed to save message" });
+    console.log(err.message)
   }
 });
 
@@ -38,7 +39,7 @@ app.get("/api/messages", async (req, res) => {
     res.json(messages);
   } catch (err) {
     res.status(500).json({ error: "Failed to retrieve messages" });
-    console.log(err);
+    console.log(err.message);
     
   }
 });
