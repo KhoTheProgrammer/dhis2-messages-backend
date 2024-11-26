@@ -17,7 +17,7 @@ pool.on("error", (err) => {
 // Function to save a message to the database
 const saveMessage = async (patientId, messageText) => {
   const query = `
-    INSERT INTO "Message" (patientId, text, dateCreated)
+    INSERT INTO "Message" ("patientId", text, "dateCreated")
     VALUES ($1, $2, NOW())
     RETURNING *;
   `;
