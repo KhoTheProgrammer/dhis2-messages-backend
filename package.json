@@ -1,7 +1,7 @@
 {
   "name": "dhis2_patient_reminder_backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "author": "KhoTheProgrammer <kondwanipadyera@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -10,5 +10,9 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "pg": "^8.13.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "migrate": "node migrate.js" 
   }
 }
